@@ -48,5 +48,48 @@
       
     </div>
     </div>
+    <script>
+      function changeAsh() {
+        var ash, pokeball, majikcarp, red, blue, yellow, silver, gold, secret42, secret11;
+        ash = document.getElementById("ash");
+        pokeball = document.getElementById("ball");
+        majikcarp = document.getElementById("majikcarp");
+        red = "hide";
+        blue = "show";
+        yellow = "hide2";
+        silver = "show2";
+        gold = "show3";
+        secret42 = "secret42";
+        secret11 = "secret11";
+        if( ash.className.match(/(?:^|\s)hide(?!\S)/) ) {
+          ash.className = ash.className.replace( /(?:^|\s)hide(?!\S)/g , '' );
+          ash.className += " " + blue;
+        } else if( ash.className.match(/(?:^|\s)show(?!\S)/) ) {
+          ash.className = ash.className.replace( /(?:^|\s)show(?!\S)/g , '' );
+          ash.className += " " + yellow;
+        }	else if( ash.className.match(/(?:^|\s)hide2(?!\S)/) ) {
+          ash.className = ash.className.replace( /(?:^|\s)hide2(?!\S)/g , '' );
+          ash.className += " " + silver;
+        } else if( ash.className.match(/(?:^|\s)show2(?!\S)/) ) {
+          ash.className = ash.className.replace( /(?:^|\s)show2(?!\S)/g , '' );
+          ash.className += " " + gold;
+          majikcarp.setAttribute("class","secret11");
+          pokeball.innerHTML = "community@grove.monster";
+        } else if( ash.className.match(/(?:^|\s)show3(?!\S)/) ) {
+          ash.className = ash.className.replace( /(?:^|\s)show3(?!\S)/g , '' );
+          ash.className += " " + red;
+          majikcarp.setAttribute("class","secret42");
+          pokeball.innerHTML = "grove.monster";
+        }
+      }
+
+      window.onload = function(){
+        document.getElementById("ash").addEventListener( 'click', changeAsh);
+      }
+
+    /// modified
+    /// original code snippet by Peter Boughton
+    /// https://stackoverflow.com/questions/195951/how-can-i-change-an-elements-class-with-javascript
+    </script>
   </body>
 </html>
