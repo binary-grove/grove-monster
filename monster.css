@@ -71,9 +71,15 @@ li span { float: right; padding-left:0.5em;}
   min-width: 3em;
 }
 
+@media (max-width: 40em) { 
+  #ash { height: 167px !important; } 
+  
+  .secret11 { width: 100% !important; font: bold 2.11em sans-serif !important;}
+}
+
 .secret42 { font: bold 5em sans-serif; }
 
-.secret11 { font: bold 2em sans-serif !important; }
+.secret11 { font: bold 2em sans-serif; }
 
 .img-layer { fill: url('#p-img'); }
 
