@@ -77,6 +77,9 @@ li span { float: right; padding-left:0.5em;}
 
 .img-layer { fill: url('#p-img'); }
 
+/* modified */
+/* code by Marcel Shields   */
+/* https://css-tricks.com/replace-the-image-in-an-img-with-css/ */
 #ash {
   display: block;
   -moz-box-sizing: border-box;
